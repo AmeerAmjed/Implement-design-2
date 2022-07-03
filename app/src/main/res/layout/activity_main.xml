@@ -4,15 +4,311 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_marginHorizontal="@dimen/spacingLarge"
+    android:layout_marginVertical="@dimen/spacingLarge"
+
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:text="@string/details"
+        style="@style/detailsStyle"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        android:src="@drawable/ic_outline_shopping_bag_24"
+        app:layout_constraintEnd_toEndOf="@id/textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/thir_color" />
+
+        <com.google.android.material.card.MaterialCardView
+        android:elevation="0dp"
+        app:strokeWidth="0dp"
+        app:strokeColor="@color/white"
+        app:cardElevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <ImageView
+                android:id="@+id/imagebaaac"
+                android:layout_width="match_parent"
+                android:layout_height="265dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/coffee_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageabacs"
+                android:layout_width="392dp"
+                android:layout_height="255dp"
+                android:src="@drawable/coffee" />
+        </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="311dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/boldTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caramel \nFrappuccino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/boldTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:text="$30.00"
+        android:textColor="@color/primart_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Best Sales"
+        android:textSize="12sp"
+        android:textColor="@color/gray_color"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/optionStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/size_options"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <LinearLayout
+        android:id="@+id/groupCup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:orientation="horizontal"
+         android:layout_marginTop="@dimen/spacingLarge"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+
+        <LinearLayout
+            android:id="@+id/clu1"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/spacingMedium"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageclu1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_cup_tall" />
+
+            <TextView
+                android:id="@+id/titl1clu1"
+                style="@style/titleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tall" />
+
+            <TextView
+                android:id="@+id/decclu1"
+                style="@style/lightStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 FI Oz" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/spacingMedium"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageclu2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_cup_custom" />
+
+            <TextView
+                android:id="@+id/titl1clu2"
+                android:text="Grande"
+                style="@style/titleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/decclu2"
+                android:text="16 FI Oz"
+                style="@style/lightStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/clu3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/spacingMedium"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageclu3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_cup_venti" />
+
+            <TextView
+                android:id="@+id/titl1clu3"
+                android:text="Venti"
+                style="@style/titleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/decclu3"
+                android:text="24 FI Oz"
+                style="@style/lightStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clu4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/spacingMedium"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageclu4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_cup_custom" />
+
+            <TextView
+                android:id="@+id/titl1clu4"
+                android:text="Custom"
+                style="@style/titleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/decclu4"
+                android:text="16 FI Oz"
+                style="@style/lightStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/groupCounter"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacingLarge"
+        android:layout_marginStart="@dimen/spacingSmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent">
+
+        <Button
+            android:id="@+id/buttadd"
+            android:layout_width="@dimen/small_button"
+            android:layout_height="@dimen/small_button"
+            android:layout_margin="0pt"
+            android:background="@drawable/ic_baseline_remove_circle_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/counters"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/groupCounter" />
+
+        <Button
+            android:id="@+id/fgf"
+            android:layout_width="@dimen/small_button"
+            android:layout_height="@dimen/small_button"
+            android:background="@drawable/ic_round_add_circle_24"
+            android:backgroundTint="@color/primart_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape_rectangle"
+        android:textAllCaps="false"
+        android:paddingHorizontal="@dimen/spacingXLarge"
+        android:paddingVertical="@dimen/spacingLarge"
+        android:text="@string/add_to_order"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
